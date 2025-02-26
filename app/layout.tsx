@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html suppressHydrationWarning lang="pt-BR">
+    <html suppressHydrationWarning lang="en">
       <head />
       <body
         className={clsx(
@@ -57,7 +57,10 @@ export default function RootLayout({
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <FontAwesomeIcon className="h-6 w-6" icon={faGithub} />
+                  <FontAwesomeIcon
+                    className="dark:text-zinc-300 text-zinc-600 h-8 w-8"
+                    icon={faGithub}
+                  />
                 </Link>
                 <Link
                   className="m-4"
@@ -65,7 +68,10 @@ export default function RootLayout({
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <FontAwesomeIcon className="h-6 w-6" icon={faLinkedin} />
+                  <FontAwesomeIcon
+                    className="dark:text-zinc-300 text-zinc-600 h-8 w-8"
+                    icon={faLinkedin}
+                  />
                 </Link>
               </div>
               <div>

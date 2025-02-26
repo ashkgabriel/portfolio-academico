@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-start min-h-screen py-2">
+    <div className="flex flex-col justify-start py-2">
       <div className="flex flex-row">
         <Image
           alt="Gabriel"

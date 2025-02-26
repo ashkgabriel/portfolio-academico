@@ -74,7 +74,7 @@ export const Navbar = () => {
         <NavbarItem className="hidden md:flex">
           <Link>
             <FontAwesomeIcon
-              className="h-8 w-8 text-zinc-300"
+              className="h-8 w-8 text-zinc-500 dark:text-zinc-300"
               icon={faEnvelope}
             />
           </Link>
