@@ -10,6 +10,7 @@ import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
+import { LanguageProvider } from "@/contexts/language-context";
 
 export const metadata: Metadata = {
   title: {
@@ -40,48 +41,50 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen">
-            <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
-              {children}
-            </main>
-            <footer className="w-full justify-center text-center flex flex-col py-3">
-              <div className="flex justify-center">
-                <Link
-                  className="m-4"
-                  href="https://github.com/ashkgabriel"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon
-                    className="dark:text-zinc-300 text-zinc-600 h-8 w-8"
-                    icon={faGithub}
-                  />
-                </Link>
-                <Link
-                  className="m-4"
-                  href="https://linkedin.com/in/gabriel-fortes-ashikaga"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon
-                    className="dark:text-zinc-300 text-zinc-600 h-8 w-8"
-                    icon={faLinkedin}
-                  />
-                </Link>
-              </div>
-              <div>
-                <p>
-                  &copy; {new Date().getFullYear()}{" "}
-                  <span className="font-bold">{siteConfig.name}</span>
-                </p>
-              </div>
-            </footer>
-          </div>
+          <LanguageProvider>
+            <div className="relative flex flex-col h-screen">
+              <Navbar />
+              <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+                {children}
+              </main>
+              <footer className="w-full justify-center text-center flex flex-col py-3">
+                <div className="flex justify-center">
+                  <Link
+                    className="m-4"
+                    href="https://github.com/ashkgabriel"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon
+                      className="dark:text-zinc-300 text-zinc-600 h-8 w-8"
+                      icon={faGithub}
+                    />
+                  </Link>
+                  <Link
+                    className="m-4"
+                    href="https://linkedin.com/in/gabriel-fortes-ashikaga"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon
+                      className="dark:text-zinc-300 text-zinc-600 h-8 w-8"
+                      icon={faLinkedin}
+                    />
+                  </Link>
+                </div>
+                <div>
+                  <p>
+                    &copy; {new Date().getFullYear()}{" "}
+                    <span className="font-bold">{siteConfig.name}</span>
+                  </p>
+                </div>
+              </footer>
+            </div>
+          </LanguageProvider>
         </Providers>
       </body>
     </html>
