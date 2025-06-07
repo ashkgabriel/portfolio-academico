@@ -1,9 +1,9 @@
 "use client";
 
-import { faEnvelope, faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faCopy, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "@heroui/button";
-import { Popover, PopoverTrigger, PopoverContent } from "@heroui/popover";
+import { Popover, PopoverContent, PopoverTrigger } from "@heroui/popover";
 import { useState } from "react";
 
 export const EmailPopover = () => {
